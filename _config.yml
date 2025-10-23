@@ -1,0 +1,17 @@
+# GitHub Pages 配置文件
+# 确保HTML文件被正确渲染
+
+# 包含所有HTML文件
+include:
+  - "*.html"
+
+# 插件配置
+plugins:
+  - jekyll-optional-front-matter
+
+# 处理HTML文件
+defaults:
+  - scope:
+      path: "*.html"
+    values:
+      layout: null
