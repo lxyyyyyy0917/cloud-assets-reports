@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云资产测试报告 - PRO环境</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Microsoft YaHei", sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        h1 { 
+            text-align: center; 
+            color: #2c3e50; 
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .summary {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .summary h2 { 
+            color: #2E75B6; 
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .summary-item {
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid;
+        }
+        .summary-item.success { background: #E6F7E6; border-color: #28a745; }
+        .summary-item.warning { background: #FFF4E6; border-color: #ffc107; }
+        .summary-item.error { background: #FFE6E6; border-color: #dc3545; }
+        .summary-item h3 { font-size: 14px; color: #666; margin-bottom: 8px; }
+        .summary-item .value { font-size: 24px; font-weight: bold; color: #333; }
+        .summary-item .status { font-size: 14px; margin-top: 5px; }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            font-size: 18px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th {
+            background: #4472C4;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        tr:hover { background: #f8f9fa; }
+        .no-data { 
+            text-align: center; 
+            padding: 40px; 
+            color: #999;
+            font-size: 16px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge-success { background: #28a745; color: white; }
+        .badge-warning { background: #ffc107; color: #333; }
+        .badge-error { background: #dc3545; color: white; }
+        .highlight { background: #fff3cd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 云资产测试报告 - PRO环境</h1>
+        
+        <div class="summary">
+            <h2>测试汇总</h2>
+            <div class="summary-grid">
+                <div class="summary-item success">
+                    <h3>下载失败的云资产</h3>
+                    <div class="value">0</div>
+                    <div class="status">✅ 通过</div>
+                </div>
+                <div class="summary-item success">
+                    <h3>下载失败的缩略图</h3>
+                    <div class="value">0</div>
+                    <div class="status">✅ 通过</div>
+                </div>
+                <div class="summary-item success">
+                    <h3>超大文件 (>10MB)</h3>
+                    <div class="value">0</div>
+                    <div class="status">✅ 通过</div>
+                </div>
+                <div class="summary-item success">
+                    <h3>MD5校验失败</h3>
+                    <div class="value">0</div>
+                    <div class="status">✅ 通过</div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="section">
+            <h2>❌ 下载失败的云资产</h2>
+            <div class="no-data">✅ 所有云资产下载成功！</div>
+        </div>
+        
+        <div class="section">
+            <h2>🖼️ 下载失败的缩略图</h2>
+            <div class="no-data">✅ 所有缩略图下载成功！</div>
+        </div>
+        
+        <div class="section">
+            <h2>⚠️ 超大文件 (>10MB)</h2>
+            <div class="no-data">✅ 没有超大文件！</div>
+        </div>
+        
+        <div class="section">
+            <h2>🔍 MD5校验失败</h2>
+            <div class="no-data">✅ 所有文件MD5校验通过！</div>
+        </div>
+    </div>
+</body>
+</html>
